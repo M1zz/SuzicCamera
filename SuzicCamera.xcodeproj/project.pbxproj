@@ -1,0 +1,694 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A540FA1C25ED523C00FB65F2 /* PhotoAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A540FA1B25ED523C00FB65F2 /* PhotoAlbumViewController.swift */; };
+		A540FA2225ED52CA00FB65F2 /* PhotoAlbumItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A540FA2125ED52CA00FB65F2 /* PhotoAlbumItemCollectionViewCell.swift */; };
+		A540FA2A25ED530E00FB65F2 /* ImageZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A540FA2925ED530E00FB65F2 /* ImageZoomViewController.swift */; };
+		A55C7FEB25EB2DBC00C6BD51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C7FEA25EB2DBC00C6BD51 /* AppDelegate.swift */; };
+		A55C7FED25EB2DBC00C6BD51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C7FEC25EB2DBC00C6BD51 /* SceneDelegate.swift */; };
+		A55C7FF225EB2DBC00C6BD51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55C7FF025EB2DBC00C6BD51 /* Main.storyboard */; };
+		A55C7FF425EB2DBE00C6BD51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A55C7FF325EB2DBE00C6BD51 /* Assets.xcassets */; };
+		A55C7FF725EB2DBE00C6BD51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55C7FF525EB2DBE00C6BD51 /* LaunchScreen.storyboard */; };
+		A55C800225EB2DBF00C6BD51 /* SuzicCameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C800125EB2DBF00C6BD51 /* SuzicCameraTests.swift */; };
+		A55C800D25EB2DBF00C6BD51 /* SuzicCameraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C800C25EB2DBF00C6BD51 /* SuzicCameraUITests.swift */; };
+		A55C802225EB2E9D00C6BD51 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C802125EB2E9D00C6BD51 /* CameraViewController.swift */; };
+		A55C802925EB2FC800C6BD51 /* CameraSreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C802825EB2FC800C6BD51 /* CameraSreenView.swift */; };
+		A55C804525EBE47900C6BD51 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C804425EBE47900C6BD51 /* UIImage+Extension.swift */; };
+		A55C805D25EC8F2200C6BD51 /* CoreMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C805C25EC8F2200C6BD51 /* CoreMotion.swift */; };
+		A55C806425ECAE3900C6BD51 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C806325ECAE3900C6BD51 /* SessionManager.swift */; };
+		A55C806C25ECBB4900C6BD51 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C806B25ECBB4900C6BD51 /* MotionManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A55C7FFE25EB2DBF00C6BD51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A55C7FDF25EB2DBC00C6BD51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A55C7FE625EB2DBC00C6BD51;
+			remoteInfo = SuzicCamera;
+		};
+		A55C800925EB2DBF00C6BD51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A55C7FDF25EB2DBC00C6BD51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A55C7FE625EB2DBC00C6BD51;
+			remoteInfo = SuzicCamera;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A540FA1B25ED523C00FB65F2 /* PhotoAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewController.swift; sourceTree = "<group>"; };
+		A540FA2125ED52CA00FB65F2 /* PhotoAlbumItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		A540FA2925ED530E00FB65F2 /* ImageZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageZoomViewController.swift; sourceTree = "<group>"; };
+		A55C7FE725EB2DBC00C6BD51 /* SuzicCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuzicCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A55C7FEA25EB2DBC00C6BD51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A55C7FEC25EB2DBC00C6BD51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A55C7FF125EB2DBC00C6BD51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A55C7FF325EB2DBE00C6BD51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A55C7FF625EB2DBE00C6BD51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A55C7FF825EB2DBE00C6BD51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A55C7FFD25EB2DBF00C6BD51 /* SuzicCameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuzicCameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A55C800125EB2DBF00C6BD51 /* SuzicCameraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuzicCameraTests.swift; sourceTree = "<group>"; };
+		A55C800325EB2DBF00C6BD51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A55C800825EB2DBF00C6BD51 /* SuzicCameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuzicCameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A55C800C25EB2DBF00C6BD51 /* SuzicCameraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuzicCameraUITests.swift; sourceTree = "<group>"; };
+		A55C800E25EB2DBF00C6BD51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A55C802125EB2E9D00C6BD51 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		A55C802825EB2FC800C6BD51 /* CameraSreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraSreenView.swift; sourceTree = "<group>"; };
+		A55C804425EBE47900C6BD51 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		A55C805C25EC8F2200C6BD51 /* CoreMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotion.swift; sourceTree = "<group>"; };
+		A55C806325ECAE3900C6BD51 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		A55C806B25ECBB4900C6BD51 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A55C7FE425EB2DBC00C6BD51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A55C7FFA25EB2DBF00C6BD51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A55C800525EB2DBF00C6BD51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A540FA0625ED41CD00FB65F2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A55C805C25EC8F2200C6BD51 /* CoreMotion.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A540FA2025ED52B100FB65F2 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				A540FA2125ED52CA00FB65F2 /* PhotoAlbumItemCollectionViewCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		A55C7FDE25EB2DBC00C6BD51 = {
+			isa = PBXGroup;
+			children = (
+				A55C7FE925EB2DBC00C6BD51 /* SuzicCamera */,
+				A55C800025EB2DBF00C6BD51 /* SuzicCameraTests */,
+				A55C800B25EB2DBF00C6BD51 /* SuzicCameraUITests */,
+				A55C7FE825EB2DBC00C6BD51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A55C7FE825EB2DBC00C6BD51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A55C7FE725EB2DBC00C6BD51 /* SuzicCamera.app */,
+				A55C7FFD25EB2DBF00C6BD51 /* SuzicCameraTests.xctest */,
+				A55C800825EB2DBF00C6BD51 /* SuzicCameraUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A55C7FE925EB2DBC00C6BD51 /* SuzicCamera */ = {
+			isa = PBXGroup;
+			children = (
+				A540FA0625ED41CD00FB65F2 /* Utilities */,
+				A55C806225ECAE2C00C6BD51 /* Managers */,
+				A55C804225EBE3F600C6BD51 /* Extensions */,
+				A55C802625EB2FA700C6BD51 /* Custom Views */,
+				A55C802025EB2E7B00C6BD51 /* Screens */,
+				A55C7FEA25EB2DBC00C6BD51 /* AppDelegate.swift */,
+				A55C7FEC25EB2DBC00C6BD51 /* SceneDelegate.swift */,
+				A55C7FF325EB2DBE00C6BD51 /* Assets.xcassets */,
+				A55C7FF525EB2DBE00C6BD51 /* LaunchScreen.storyboard */,
+				A55C7FF825EB2DBE00C6BD51 /* Info.plist */,
+			);
+			path = SuzicCamera;
+			sourceTree = "<group>";
+		};
+		A55C800025EB2DBF00C6BD51 /* SuzicCameraTests */ = {
+			isa = PBXGroup;
+			children = (
+				A55C800125EB2DBF00C6BD51 /* SuzicCameraTests.swift */,
+				A55C800325EB2DBF00C6BD51 /* Info.plist */,
+			);
+			path = SuzicCameraTests;
+			sourceTree = "<group>";
+		};
+		A55C800B25EB2DBF00C6BD51 /* SuzicCameraUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A55C800C25EB2DBF00C6BD51 /* SuzicCameraUITests.swift */,
+				A55C800E25EB2DBF00C6BD51 /* Info.plist */,
+			);
+			path = SuzicCameraUITests;
+			sourceTree = "<group>";
+		};
+		A55C802025EB2E7B00C6BD51 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A55C7FF025EB2DBC00C6BD51 /* Main.storyboard */,
+				A55C802125EB2E9D00C6BD51 /* CameraViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A55C802625EB2FA700C6BD51 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				A540FA2025ED52B100FB65F2 /* cells */,
+				A55C806125ECA77F00C6BD51 /* ViewControllers */,
+				A55C802725EB2FAF00C6BD51 /* Views */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		A55C802725EB2FAF00C6BD51 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A55C802825EB2FC800C6BD51 /* CameraSreenView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A55C804225EBE3F600C6BD51 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A55C804425EBE47900C6BD51 /* UIImage+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A55C806125ECA77F00C6BD51 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A540FA1B25ED523C00FB65F2 /* PhotoAlbumViewController.swift */,
+				A540FA2925ED530E00FB65F2 /* ImageZoomViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A55C806225ECAE2C00C6BD51 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A55C806325ECAE3900C6BD51 /* SessionManager.swift */,
+				A55C806B25ECBB4900C6BD51 /* MotionManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A55C7FE625EB2DBC00C6BD51 /* SuzicCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A55C801125EB2DBF00C6BD51 /* Build configuration list for PBXNativeTarget "SuzicCamera" */;
+			buildPhases = (
+				A55C7FE325EB2DBC00C6BD51 /* Sources */,
+				A55C7FE425EB2DBC00C6BD51 /* Frameworks */,
+				A55C7FE525EB2DBC00C6BD51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SuzicCamera;
+			productName = SuzicCamera;
+			productReference = A55C7FE725EB2DBC00C6BD51 /* SuzicCamera.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A55C7FFC25EB2DBF00C6BD51 /* SuzicCameraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A55C801425EB2DBF00C6BD51 /* Build configuration list for PBXNativeTarget "SuzicCameraTests" */;
+			buildPhases = (
+				A55C7FF925EB2DBF00C6BD51 /* Sources */,
+				A55C7FFA25EB2DBF00C6BD51 /* Frameworks */,
+				A55C7FFB25EB2DBF00C6BD51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A55C7FFF25EB2DBF00C6BD51 /* PBXTargetDependency */,
+			);
+			name = SuzicCameraTests;
+			productName = SuzicCameraTests;
+			productReference = A55C7FFD25EB2DBF00C6BD51 /* SuzicCameraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A55C800725EB2DBF00C6BD51 /* SuzicCameraUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A55C801725EB2DBF00C6BD51 /* Build configuration list for PBXNativeTarget "SuzicCameraUITests" */;
+			buildPhases = (
+				A55C800425EB2DBF00C6BD51 /* Sources */,
+				A55C800525EB2DBF00C6BD51 /* Frameworks */,
+				A55C800625EB2DBF00C6BD51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A55C800A25EB2DBF00C6BD51 /* PBXTargetDependency */,
+			);
+			name = SuzicCameraUITests;
+			productName = SuzicCameraUITests;
+			productReference = A55C800825EB2DBF00C6BD51 /* SuzicCameraUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A55C7FDF25EB2DBC00C6BD51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					A55C7FE625EB2DBC00C6BD51 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					A55C7FFC25EB2DBF00C6BD51 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = A55C7FE625EB2DBC00C6BD51;
+					};
+					A55C800725EB2DBF00C6BD51 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = A55C7FE625EB2DBC00C6BD51;
+					};
+				};
+			};
+			buildConfigurationList = A55C7FE225EB2DBC00C6BD51 /* Build configuration list for PBXProject "SuzicCamera" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A55C7FDE25EB2DBC00C6BD51;
+			productRefGroup = A55C7FE825EB2DBC00C6BD51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A55C7FE625EB2DBC00C6BD51 /* SuzicCamera */,
+				A55C7FFC25EB2DBF00C6BD51 /* SuzicCameraTests */,
+				A55C800725EB2DBF00C6BD51 /* SuzicCameraUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A55C7FE525EB2DBC00C6BD51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A55C7FF725EB2DBE00C6BD51 /* LaunchScreen.storyboard in Resources */,
+				A55C7FF425EB2DBE00C6BD51 /* Assets.xcassets in Resources */,
+				A55C7FF225EB2DBC00C6BD51 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A55C7FFB25EB2DBF00C6BD51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A55C800625EB2DBF00C6BD51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A55C7FE325EB2DBC00C6BD51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A55C7FEB25EB2DBC00C6BD51 /* AppDelegate.swift in Sources */,
+				A55C802925EB2FC800C6BD51 /* CameraSreenView.swift in Sources */,
+				A540FA2A25ED530E00FB65F2 /* ImageZoomViewController.swift in Sources */,
+				A540FA1C25ED523C00FB65F2 /* PhotoAlbumViewController.swift in Sources */,
+				A55C804525EBE47900C6BD51 /* UIImage+Extension.swift in Sources */,
+				A540FA2225ED52CA00FB65F2 /* PhotoAlbumItemCollectionViewCell.swift in Sources */,
+				A55C7FED25EB2DBC00C6BD51 /* SceneDelegate.swift in Sources */,
+				A55C805D25EC8F2200C6BD51 /* CoreMotion.swift in Sources */,
+				A55C802225EB2E9D00C6BD51 /* CameraViewController.swift in Sources */,
+				A55C806425ECAE3900C6BD51 /* SessionManager.swift in Sources */,
+				A55C806C25ECBB4900C6BD51 /* MotionManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A55C7FF925EB2DBF00C6BD51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A55C800225EB2DBF00C6BD51 /* SuzicCameraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A55C800425EB2DBF00C6BD51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A55C800D25EB2DBF00C6BD51 /* SuzicCameraUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A55C7FFF25EB2DBF00C6BD51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A55C7FE625EB2DBC00C6BD51 /* SuzicCamera */;
+			targetProxy = A55C7FFE25EB2DBF00C6BD51 /* PBXContainerItemProxy */;
+		};
+		A55C800A25EB2DBF00C6BD51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A55C7FE625EB2DBC00C6BD51 /* SuzicCamera */;
+			targetProxy = A55C800925EB2DBF00C6BD51 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A55C7FF025EB2DBC00C6BD51 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A55C7FF125EB2DBC00C6BD51 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A55C7FF525EB2DBE00C6BD51 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A55C7FF625EB2DBE00C6BD51 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A55C800F25EB2DBF00C6BD51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A55C801025EB2DBF00C6BD51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A55C801225EB2DBF00C6BD51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				INFOPLIST_FILE = SuzicCamera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ysoup.SuzicCamera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A55C801325EB2DBF00C6BD51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				INFOPLIST_FILE = SuzicCamera/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ysoup.SuzicCamera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A55C801525EB2DBF00C6BD51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				INFOPLIST_FILE = SuzicCameraTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ysoup.SuzicCameraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuzicCamera.app/SuzicCamera";
+			};
+			name = Debug;
+		};
+		A55C801625EB2DBF00C6BD51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				INFOPLIST_FILE = SuzicCameraTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ysoup.SuzicCameraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuzicCamera.app/SuzicCamera";
+			};
+			name = Release;
+		};
+		A55C801825EB2DBF00C6BD51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				INFOPLIST_FILE = SuzicCameraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ysoup.SuzicCameraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SuzicCamera;
+			};
+			name = Debug;
+		};
+		A55C801925EB2DBF00C6BD51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QGAQ3AY3R3;
+				INFOPLIST_FILE = SuzicCameraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ysoup.SuzicCameraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SuzicCamera;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A55C7FE225EB2DBC00C6BD51 /* Build configuration list for PBXProject "SuzicCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A55C800F25EB2DBF00C6BD51 /* Debug */,
+				A55C801025EB2DBF00C6BD51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A55C801125EB2DBF00C6BD51 /* Build configuration list for PBXNativeTarget "SuzicCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A55C801225EB2DBF00C6BD51 /* Debug */,
+				A55C801325EB2DBF00C6BD51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A55C801425EB2DBF00C6BD51 /* Build configuration list for PBXNativeTarget "SuzicCameraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A55C801525EB2DBF00C6BD51 /* Debug */,
+				A55C801625EB2DBF00C6BD51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A55C801725EB2DBF00C6BD51 /* Build configuration list for PBXNativeTarget "SuzicCameraUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A55C801825EB2DBF00C6BD51 /* Debug */,
+				A55C801925EB2DBF00C6BD51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A55C7FDF25EB2DBC00C6BD51 /* Project object */;
+}
