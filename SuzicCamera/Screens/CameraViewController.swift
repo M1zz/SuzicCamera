@@ -14,28 +14,28 @@ class CameraViewController: UIViewController {
     
     private let photoOutput = AVCapturePhotoOutput()
     
-    //private var isFlashOn: Bool = false // 플래시 상태 프로퍼티
-
-
     @IBOutlet weak var cameraSreenView: CameraSreenView!
-    @IBOutlet weak var captureButtonView: UIView!
-    @IBOutlet weak var switchButton: UIButton!
-    
-    @IBOutlet weak var photosAlbumButton: UIButton!
+    @IBOutlet weak var cameraControlView: CameraControlView!
     
     private let motionManager = MotionManager()
     var authorizationStatus: PHAuthorizationStatus? // 포토앨범 썸네일 1장 불러오기 위한 프로퍼티-3
     var imageManger: PHCachingImageManager?
     var assetsFetchResults: PHFetchResult<PHAsset>! // 포토앨범 썸네일 1장 불러오기 위한 프로퍼티-1
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // self.checkTutorial()
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         configureSessions()
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
-        // self.checkTutorial()
         super.viewDidAppear(animated)
         setLatestPhoto()
     }
@@ -46,7 +46,7 @@ class CameraViewController: UIViewController {
         SessionManager.shared.stopSession()
         motionManager.motionKit.stopDeviceMotionUpdates()
     }
-    
+       
     
     private func configureSessions() {
         cameraSreenView.session = SessionManager.shared.captureSession
@@ -81,7 +81,7 @@ class CameraViewController: UIViewController {
                 PHPhotoLibrary.shared().performChanges({
                     PHAssetChangeRequest.creationRequestForAsset(from: image)
                 }) { (_, error) in
-                    //self.setLatestPhoto() // 앨범버튼 썸네일 업데이트
+                    self.setLatestPhoto() // 앨범버튼 썸네일 업데이트
                 }
             } else {
                 print(" error to save photo library")
@@ -117,9 +117,7 @@ class CameraViewController: UIViewController {
     
     
     private func setLatestPhoto(){
-        
         PHPhotoLibrary.authorizationStatus()
-        
         authorizationStatus = PHPhotoLibrary.authorizationStatus()
         
         if let authorizationStatusOfPhoto = authorizationStatus {
@@ -139,11 +137,11 @@ class CameraViewController: UIViewController {
                                                options: nil,
                                                resultHandler: { (result : UIImage?, info) in
                                                 DispatchQueue.main.async {
-                                                    self.photosAlbumButton.setImage(result, for: .normal)
-                                                    self.photosAlbumButton.layer.cornerRadius = 10
-                                                    self.photosAlbumButton.layer.masksToBounds = true
-                                                    self.photosAlbumButton.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-                                                    self.photosAlbumButton.layer.borderWidth = 1
+                                                    self.cameraControlView.photosAlbumButton.setImage(result, for: .normal)
+                                                    self.cameraControlView.photosAlbumButton.layer.cornerRadius = 10
+                                                    self.cameraControlView.photosAlbumButton.layer.masksToBounds = true
+                                                    self.cameraControlView.photosAlbumButton.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                                                    self.cameraControlView.photosAlbumButton.layer.borderWidth = 1
                                                 }
                                                 })
                 //self.photoAlbumCollectionView?.reloadData()
@@ -183,6 +181,3 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
         self.savePhotoLibrary(image: resizeImage(image: croppedImage, newWidth: 1080))
     }
 }
-
-
-

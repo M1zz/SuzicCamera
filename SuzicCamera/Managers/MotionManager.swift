@@ -17,9 +17,6 @@ class MotionManager {
     var rectOfpreviewImage: CGRect? // previewImage의 CGRect
     //var cameraViewPhotoSize: CameraViewPhotoSize? // 카메라 뷰에 담길 촬영 포토 사이즈를 위한 프로퍼티
     var focusBox: UIView! // 초점 박스
-    var assetsFetchResults: PHFetchResult<PHAsset>! // 포토앨범 썸네일 1장 불러오기 위한 프로퍼티-1
-    var imageManger: PHCachingImageManager?         // 포토앨범 썸네일 1장 불러오기 위한 프로퍼티-2
-    var authorizationStatus: PHAuthorizationStatus? // 포토앨범 썸네일 1장 불러오기 위한 프로퍼티-3
     var timerStatus: Int = 0 // 타이머 0초, 3초, 5초, 10초 구분을 위한 프로퍼티
     var setTime: Int = 0 // 타이머 카운트다운을 위한 프로퍼티
     var countTimer: Timer! // 동적 타이머 프로퍼티를 컨트롤하기 위한 정적 프로퍼티
@@ -37,15 +34,21 @@ class MotionManager {
     var pageStatus = 0 // 페이지 컨트롤 인터랙션을 위한 프로퍼티
     let pageSize = 3 // 레이아웃 모드의 개수
 
+    var feedbackGenerator: UINotificationFeedbackGenerator?
+    var verticalOkHapticFlag: Bool = true
+    var horizontalOkHapticFlag: Bool = true
     
-    // MARK: 수평, 수직계 Indicator
+    func setFeedbackGenerator() {
+        self.feedbackGenerator = UINotificationFeedbackGenerator()
+        self.feedbackGenerator?.prepare()
+    }
+    
+    // MARK: horizontal, vertical indicator
     func setGravityAccelerator(horizontalIndicator: UIView, verticalIndicator: UIView, verticalIndicatorHeightConstraint: NSLayoutConstraint) {
-        
+
         motionKit.getGravityAccelerationFromDeviceMotion(interval: 0.02) { [self] (x, y, z) in
             // x(H)가 좌-1 우+1, z(V)가 앞-1 뒤+1
             var transform: CATransform3D
-            
-            /* Horizontal part */
             
             let roundedX = Float(round(x * 100)) / 100.0
             self.currentAngleH = roundedX * 90
@@ -56,7 +59,6 @@ class MotionManager {
             let roundedY = Float(round(y * 100)) / 100.0
             self.currentAngleY = roundedY * 90
 
-            
             // if 임시각도on -> 영점 조절
             if self.isOn_AnglePin == true {
                 self.currentAngleH -= self.tempAngleH
@@ -75,20 +77,30 @@ class MotionManager {
                 self.currentAngleV -= self.tempAngleV
             }
             //print("x: \(roundedX), y:\(roundedY), z:\(roundedZ) currentAngleH: \(currentAngleH), currentAngleV:\(currentAngleV), currentAngleY:\(currentAngleY)")
-            if self.currentAngleV < 3 && self.currentAngleV > -3 ,
-               self.currentAngleH < 3 && self.currentAngleH > -3 {
-                
-                //captureButtonView.backgroundColor = .systemGreen
-                horizontalIndicator.backgroundColor = .systemGreen
+            if self.currentAngleV < 3 && self.currentAngleV > -3 {
                 verticalIndicator.backgroundColor = .systemGreen
+                if verticalOkHapticFlag {
+                    self.feedbackGenerator?.notificationOccurred(.success)
+                    verticalOkHapticFlag = false
+                }
             } else {
-                //captureButtonView.backgroundColor = .systemRed
-                horizontalIndicator.backgroundColor = .systemRed
                 verticalIndicator.backgroundColor = .systemRed
+                verticalOkHapticFlag = true
+            }
+            
+            if self.currentAngleH < 3 && self.currentAngleH > -3 {
+                horizontalIndicator.backgroundColor = .systemGreen
+                if horizontalOkHapticFlag {
+                    self.feedbackGenerator?.notificationOccurred(.success)
+                    horizontalOkHapticFlag = false
+                }
+            } else {
+                horizontalIndicator.backgroundColor = .systemRed
+                horizontalOkHapticFlag = true
             }
             
             if CGFloat(-currentAngleV) > 0 {
-                verticalIndicatorHeightConstraint.constant = CGFloat(-currentAngleV)
+                verticalIndicatorHeightConstraint.constant = CGFloat(-currentAngleV) * 2
             }
         }
     }

@@ -25,6 +25,7 @@ class CameraSreenView: UIView {
     
     
     override func awakeFromNib() {
+        motionManager.setFeedbackGenerator()
         motionManager.setGravityAccelerator(horizontalIndicator: horizontalIndicator, verticalIndicator: verticalIndicator, verticalIndicatorHeightConstraint: verticalIndicatorHeightConstraint)
     }
     
