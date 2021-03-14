@@ -35,43 +35,55 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fay-Bn-bCF" customClass="CameraSreenView" customModule="SuzicCamera" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="566"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSN-fv-td0">
-                                        <rect key="frame" x="204.66666666666666" y="371" width="5" height="60"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zsN-MO-9K9">
+                                        <rect key="frame" x="162" y="350" width="90" height="90"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="5" id="5v0-uI-opq"/>
-                                            <constraint firstAttribute="height" constant="60" id="Hcj-bo-pke"/>
+                                            <constraint firstAttribute="height" constant="90" id="tR2-wE-FXv"/>
+                                            <constraint firstAttribute="width" constant="90" id="uQg-Nk-6ak"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSN-fv-td0">
+                                        <rect key="frame" x="206" y="350" width="2" height="90"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="2" id="5v0-uI-opq"/>
+                                            <constraint firstAttribute="height" constant="90" id="Hcj-bo-pke"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Y5-0O-VuP">
-                                        <rect key="frame" x="0.0" y="400" width="414" height="2"/>
+                                        <rect key="frame" x="162" y="394" width="90" height="2"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="2" id="zIh-Uj-W6h"/>
+                                            <constraint firstAttribute="width" constant="90" id="LGH-bp-aQl"/>
+                                            <constraint firstAttribute="height" constant="2" id="jxd-R8-PD3"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yTP-YS-JDb">
-                                        <rect key="frame" x="0.0" y="400" width="414" height="2"/>
+                                        <rect key="frame" x="162" y="394" width="90" height="2"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="2" id="Jog-rL-y4B"/>
+                                            <constraint firstAttribute="height" constant="2" id="MtA-KW-yLE"/>
+                                            <constraint firstAttribute="width" constant="90" id="nUS-ru-noS"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="yTP-YS-JDb" secondAttribute="trailing" id="DsX-a9-acg"/>
-                                    <constraint firstItem="yTP-YS-JDb" firstAttribute="centerY" secondItem="5Y5-0O-VuP" secondAttribute="centerY" id="R1k-pW-38f"/>
-                                    <constraint firstItem="5Y5-0O-VuP" firstAttribute="top" secondItem="Fay-Bn-bCF" secondAttribute="top" constant="400" id="cJC-gw-7Nc"/>
+                                    <constraint firstItem="5Y5-0O-VuP" firstAttribute="centerX" secondItem="zsN-MO-9K9" secondAttribute="centerX" id="8xM-uA-Qqo"/>
+                                    <constraint firstItem="yTP-YS-JDb" firstAttribute="centerX" secondItem="zsN-MO-9K9" secondAttribute="centerX" id="B7D-l2-Kq0"/>
+                                    <constraint firstItem="zsN-MO-9K9" firstAttribute="top" secondItem="Fay-Bn-bCF" secondAttribute="top" constant="350" id="IU2-Rl-8i3"/>
+                                    <constraint firstItem="5Y5-0O-VuP" firstAttribute="centerY" secondItem="zsN-MO-9K9" secondAttribute="centerY" id="P5t-4R-IZ7"/>
+                                    <constraint firstItem="zsN-MO-9K9" firstAttribute="centerX" secondItem="sSN-fv-td0" secondAttribute="centerX" id="Psq-5Y-Dmc"/>
+                                    <constraint firstItem="sSN-fv-td0" firstAttribute="centerY" secondItem="zsN-MO-9K9" secondAttribute="centerY" id="VP4-1J-aYG"/>
                                     <constraint firstAttribute="height" constant="566" id="cTo-kO-5YH"/>
-                                    <constraint firstItem="5Y5-0O-VuP" firstAttribute="leading" secondItem="Fay-Bn-bCF" secondAttribute="leading" id="fVT-6H-8vy"/>
-                                    <constraint firstAttribute="trailing" secondItem="5Y5-0O-VuP" secondAttribute="trailing" id="gve-e0-l1F"/>
-                                    <constraint firstItem="yTP-YS-JDb" firstAttribute="leading" secondItem="Fay-Bn-bCF" secondAttribute="leading" id="iPt-g0-YOp"/>
-                                    <constraint firstItem="sSN-fv-td0" firstAttribute="centerY" secondItem="5Y5-0O-VuP" secondAttribute="centerY" id="vDg-So-Qvp"/>
-                                    <constraint firstItem="sSN-fv-td0" firstAttribute="centerX" secondItem="Fay-Bn-bCF" secondAttribute="centerX" id="x9g-k3-uuJ"/>
+                                    <constraint firstItem="yTP-YS-JDb" firstAttribute="centerY" secondItem="zsN-MO-9K9" secondAttribute="centerY" id="dt1-TM-YW5"/>
+                                    <constraint firstItem="zsN-MO-9K9" firstAttribute="centerX" secondItem="Fay-Bn-bCF" secondAttribute="centerX" id="ptR-JI-NaI"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="baseline" destination="5Y5-0O-VuP" id="pGF-Er-Nm2"/>
+                                    <outlet property="circleIndicator" destination="zsN-MO-9K9" id="dpb-QN-4I1"/>
+                                    <outlet property="circleIndicatorHeightConstraint" destination="tR2-wE-FXv" id="ALu-ik-OY3"/>
                                     <outlet property="horizontalIndicator" destination="yTP-YS-JDb" id="kXP-jj-KK4"/>
                                     <outlet property="verticalIndicator" destination="sSN-fv-td0" id="jQ9-hR-eBu"/>
                                     <outlet property="verticalIndicatorHeightConstraint" destination="Hcj-bo-pke" id="8ww-QU-IhN"/>

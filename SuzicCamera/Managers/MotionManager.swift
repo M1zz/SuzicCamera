@@ -44,7 +44,11 @@ class MotionManager {
     }
     
     // MARK: horizontal, vertical indicator
-    func setGravityAccelerator(horizontalIndicator: UIView, verticalIndicator: UIView, verticalIndicatorHeightConstraint: NSLayoutConstraint) {
+    func setGravityAccelerator(horizontalIndicator: UIView,
+                               verticalIndicator: UIView,
+                               circleIndicator: UIView,
+                               verticalIndicatorHeightConstraint: NSLayoutConstraint,
+                               circleIndicatorHeightConstraint: NSLayoutConstraint) {
 
         motionKit.getGravityAccelerationFromDeviceMotion(interval: 0.02) { [self] (x, y, z) in
             // x(H)가 좌-1 우+1, z(V)가 앞-1 뒤+1
@@ -77,31 +81,43 @@ class MotionManager {
                 self.currentAngleV -= self.tempAngleV
             }
             //print("x: \(roundedX), y:\(roundedY), z:\(roundedZ) currentAngleH: \(currentAngleH), currentAngleV:\(currentAngleV), currentAngleY:\(currentAngleY)")
-            if self.currentAngleV < 3 && self.currentAngleV > -3 {
-                verticalIndicator.backgroundColor = .systemGreen
-                if verticalOkHapticFlag {
-                    self.feedbackGenerator?.notificationOccurred(.success)
-                    verticalOkHapticFlag = false
-                }
-            } else {
-                verticalIndicator.backgroundColor = .systemRed
-                verticalOkHapticFlag = true
-            }
-            
-            if self.currentAngleH < 3 && self.currentAngleH > -3 {
-                horizontalIndicator.backgroundColor = .systemGreen
-                if horizontalOkHapticFlag {
-                    self.feedbackGenerator?.notificationOccurred(.success)
-                    horizontalOkHapticFlag = false
-                }
-            } else {
-                horizontalIndicator.backgroundColor = .systemRed
-                horizontalOkHapticFlag = true
-            }
-            
+
+            checkVerticalBalance(for: verticalIndicator, for: circleIndicator)
+            checkHorizontalBalance(for: horizontalIndicator)
+
             if CGFloat(-currentAngleV) > 0 {
-                verticalIndicatorHeightConstraint.constant = CGFloat(-currentAngleV) * 2
+
+                verticalIndicatorHeightConstraint.constant = 90 - CGFloat(-currentAngleV)
+                circleIndicatorHeightConstraint.constant = 90 - CGFloat(-currentAngleV)
             }
+        }
+    }
+    
+    private func checkVerticalBalance(for verticalIndicator: UIView, for circleIndicator: UIView) {
+        if self.currentAngleV < 3 && self.currentAngleV > -3 {
+            verticalIndicator.backgroundColor = .systemGreen
+            circleIndicator.layer.borderColor = UIColor.systemGreen.cgColor
+            if verticalOkHapticFlag {
+                self.feedbackGenerator?.notificationOccurred(.success)
+                verticalOkHapticFlag = false
+            }
+        } else {
+            verticalIndicator.backgroundColor = .systemRed
+            circleIndicator.layer.borderColor = UIColor.systemRed.cgColor
+            verticalOkHapticFlag = true
+        }
+    }
+    
+    private func checkHorizontalBalance(for horizontalIndicator: UIView) {
+        if self.currentAngleH < 3 && self.currentAngleH > -3 {
+            horizontalIndicator.backgroundColor = .systemGreen
+            if horizontalOkHapticFlag {
+                self.feedbackGenerator?.notificationOccurred(.success)
+                horizontalOkHapticFlag = false
+            }
+        } else {
+            horizontalIndicator.backgroundColor = .systemRed
+            horizontalOkHapticFlag = true
         }
     }
 }
