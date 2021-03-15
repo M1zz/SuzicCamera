@@ -89,6 +89,9 @@ class MotionManager {
 
                 verticalIndicatorHeightConstraint.constant = 90 - CGFloat(-currentAngleV)
                 circleIndicatorHeightConstraint.constant = 90 - CGFloat(-currentAngleV)
+            } else if CGFloat(-currentAngleV) < 0 {
+                verticalIndicatorHeightConstraint.constant = 90 + CGFloat(-currentAngleV)
+                circleIndicatorHeightConstraint.constant = 90 + CGFloat(-currentAngleV)
             }
         }
     }

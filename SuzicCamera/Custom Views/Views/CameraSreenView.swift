@@ -27,6 +27,7 @@ class CameraSreenView: UIView {
     
     
     override func awakeFromNib() {
+        print(self.layer.bounds.width, self.layer.bounds.width * (4/3), self.layer.bounds.height)
         configureMotionManager()
         configureCircleIndicator()
     }
