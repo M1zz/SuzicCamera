@@ -93,6 +93,9 @@
                                                         </constraints>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="bolt.fill" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="didTapFlashButton:" destination="6eE-gn-09S" eventType="touchUpInside" id="052-HA-ccc"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTt-lY-4zu">
                                                         <rect key="frame" x="95" y="0.0" width="30" height="30"/>
@@ -103,6 +106,9 @@
                                                         </constraints>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="square.grid.3x3.fill.square" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="didTapGridButton:" destination="6eE-gn-09S" eventType="touchUpInside" id="48v-h7-O5k"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQE-QS-9DZ">
                                                         <rect key="frame" x="190" y="0.0" width="30" height="30"/>
@@ -115,6 +121,9 @@
                                                         <state key="normal" title="4:3">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="didTapChangeRatioButton:" destination="6eE-gn-09S" eventType="touchUpInside" id="aTF-7C-1CC"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wx4-Is-4hq">
                                                         <rect key="frame" x="285" y="0.0" width="30" height="30"/>
@@ -125,6 +134,9 @@
                                                         </constraints>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="gearshape" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="didTapSettingButton:" destination="6eE-gn-09S" eventType="touchUpInside" id="VZB-xs-FOl"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
