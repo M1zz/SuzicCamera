@@ -23,20 +23,27 @@ class CameraToolbarView: UIView {
         ratioButton.layer.cornerRadius = 0.5 * ratioButton.bounds.size.width
         settingButton.layer.cornerRadius = 0.5 * settingButton.bounds.size.width
         
+        chageFlashStatusIcon()
     }
     
     
     @IBAction func didTapFlashButton(_ sender: Any) {
         flashToggle.toggle()
-        // chageFlashStatusIcon()
+        chageFlashStatusIcon()
         print("Flash \(flashToggle)")
     }
+
     
-    static func asdf() {
-        print("asdf")
+    private func chageFlashStatusIcon() {
+        switch flashToggle {
+        case true:
+            flashButton.setImage(UIImage(systemName: "bolt.fill"), for: .normal)
+        case false:
+            flashButton.setImage(UIImage(systemName: "bolt.slash.fill"), for: .normal)
+        }
+        print(flashButton.currentImage?.description)
     }
-    
-    open func getFlashMode() -> AVCaptureDevice.FlashMode {
+    func getFlashMode() -> AVCaptureDevice.FlashMode {
         var valueOfAVCaptureFlashMode: AVCaptureDevice.FlashMode = .off
         
         switch flashToggle {

@@ -212,19 +212,19 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Y5-0O-VuP">
-                                        <rect key="frame" x="142.66666666666666" y="394" width="90" height="2"/>
-                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <rect key="frame" x="142.66666666666666" y="394.66666666666669" width="90" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="LGH-bp-aQl"/>
-                                            <constraint firstAttribute="height" constant="2" id="jxd-R8-PD3"/>
+                                            <constraint firstAttribute="height" constant="1" id="jxd-R8-PD3"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yTP-YS-JDb">
-                                        <rect key="frame" x="142.66666666666666" y="394" width="90" height="2"/>
+                                        <rect key="frame" x="117.66666666666669" y="394" width="140" height="2"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="MtA-KW-yLE"/>
-                                            <constraint firstAttribute="width" constant="90" id="nUS-ru-noS"/>
+                                            <constraint firstAttribute="width" constant="140" id="nUS-ru-noS"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -405,9 +405,6 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
