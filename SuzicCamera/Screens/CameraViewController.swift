@@ -22,7 +22,6 @@ class CameraViewController: UIViewController {
     var imageManger: PHCachingImageManager?
     var assetsFetchResults: PHFetchResult<PHAsset>! // 포토앨범 썸네일 1장 불러오기 위한 프로퍼티-1
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // self.checkTutorial()
@@ -70,6 +69,11 @@ class CameraViewController: UIViewController {
             connection?.videoOrientation = videoPreviewLayerOrientation!
             
             let setting = AVCapturePhotoSettings()
+            
+            let camera = self.cameraControlView
+            let tool = camera?.cameraToolbarView as! CameraToolbarView
+            
+            setting.flashMode = tool.getFlashMode()
             self.photoOutput.capturePhoto(with: setting, delegate: self)
         }
     }

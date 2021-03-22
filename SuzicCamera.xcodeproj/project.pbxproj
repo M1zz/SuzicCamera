@@ -24,6 +24,8 @@
 		A55C806425ECAE3900C6BD51 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C806325ECAE3900C6BD51 /* SessionManager.swift */; };
 		A55C806C25ECBB4900C6BD51 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55C806B25ECBB4900C6BD51 /* MotionManager.swift */; };
 		A5DD2CA625FE50460078F916 /* CameraControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DD2CA525FE50460078F916 /* CameraControlView.swift */; };
+		A5DD2CAB25FF02A30078F916 /* CameraToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DD2CAA25FF02A30078F916 /* CameraToolbarView.swift */; };
+		A5DD2CB025FF02BD0078F916 /* CameraStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DD2CAF25FF02BD0078F916 /* CameraStatusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		A55C806325ECAE3900C6BD51 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		A55C806B25ECBB4900C6BD51 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		A5DD2CA525FE50460078F916 /* CameraControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlView.swift; sourceTree = "<group>"; };
+		A5DD2CAA25FF02A30078F916 /* CameraToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraToolbarView.swift; sourceTree = "<group>"; };
+		A5DD2CAF25FF02BD0078F916 /* CameraStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraStatusView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +193,8 @@
 			children = (
 				A55C802825EB2FC800C6BD51 /* CameraSreenView.swift */,
 				A5DD2CA525FE50460078F916 /* CameraControlView.swift */,
+				A5DD2CAA25FF02A30078F916 /* CameraToolbarView.swift */,
+				A5DD2CAF25FF02BD0078F916 /* CameraStatusView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 				A540FA2A25ED530E00FB65F2 /* ImageZoomViewController.swift in Sources */,
 				A540FA1C25ED523C00FB65F2 /* PhotoAlbumViewController.swift in Sources */,
 				A55C804525EBE47900C6BD51 /* UIImage+Extension.swift in Sources */,
+				A5DD2CB025FF02BD0078F916 /* CameraStatusView.swift in Sources */,
 				A540FA2225ED52CA00FB65F2 /* PhotoAlbumItemCollectionViewCell.swift in Sources */,
 				A55C7FED25EB2DBC00C6BD51 /* SceneDelegate.swift in Sources */,
 				A55C805D25EC8F2200C6BD51 /* CoreMotion.swift in Sources */,
@@ -361,6 +368,7 @@
 				A55C806425ECAE3900C6BD51 /* SessionManager.swift in Sources */,
 				A55C806C25ECBB4900C6BD51 /* MotionManager.swift in Sources */,
 				A5DD2CA625FE50460078F916 /* CameraControlView.swift in Sources */,
+				A5DD2CAB25FF02A30078F916 /* CameraToolbarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
