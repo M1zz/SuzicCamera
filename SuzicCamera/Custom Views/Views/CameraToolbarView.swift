@@ -8,6 +8,9 @@
 import UIKit
 import AVFoundation
 
+protocol CameraToolbarDelegate: class {
+    func didTapGridOnOffButton()
+}
 class CameraToolbarView: UIView {
 
     @IBOutlet weak var flashButton: UIButton!
@@ -16,6 +19,7 @@ class CameraToolbarView: UIView {
     @IBOutlet weak var settingButton: UIButton!
 
     private var flashToggle: Bool = false
+    weak var delegate: CameraToolbarDelegate!
     
     override func awakeFromNib() {
         flashButton.layer.cornerRadius = 0.5 * flashButton.bounds.size.width
@@ -58,6 +62,7 @@ class CameraToolbarView: UIView {
     
     @IBAction func didTapGridButton(_ sender: Any) {
         print("grid On/Off")
+        delegate.didTapGridOnOffButton()
     }
     
     @IBAction func didTapChangeRatioButton(_ sender: Any) {

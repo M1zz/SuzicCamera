@@ -16,6 +16,8 @@ class CameraViewController: UIViewController {
     
     @IBOutlet weak var cameraSreenView: CameraSreenView!
     @IBOutlet weak var cameraControlView: CameraControlView!
+    @IBOutlet weak var cameraGridView: CameraGridVIew!
+    
     
     private let motionManager = MotionManager()
     var authorizationStatus: PHAuthorizationStatus? // 포토앨범 썸네일 1장 불러오기 위한 프로퍼티-3
@@ -25,6 +27,7 @@ class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // self.checkTutorial()
+        cameraControlView.cameraToolbarView.delegate = self
     }
     
     
@@ -183,5 +186,11 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
         croppedImage = cropImageWithRatio(image: image, rect: rectRatio, scale: 1.0) ?? image
 
         self.savePhotoLibrary(image: resizeImage(image: croppedImage, newWidth: 1080))
+    }
+}
+
+extension CameraViewController: CameraToolbarDelegate {
+    func didTapGridOnOffButton() {
+        cameraGridView.isHidden.toggle()
     }
 }

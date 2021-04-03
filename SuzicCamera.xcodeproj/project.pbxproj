@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A504BC8326184F8300B948F7 /* CameraGridVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A504BC8226184F8300B948F7 /* CameraGridVIew.swift */; };
 		A540FA1C25ED523C00FB65F2 /* PhotoAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A540FA1B25ED523C00FB65F2 /* PhotoAlbumViewController.swift */; };
 		A540FA2225ED52CA00FB65F2 /* PhotoAlbumItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A540FA2125ED52CA00FB65F2 /* PhotoAlbumItemCollectionViewCell.swift */; };
 		A540FA2A25ED530E00FB65F2 /* ImageZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A540FA2925ED530E00FB65F2 /* ImageZoomViewController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A504BC8226184F8300B948F7 /* CameraGridVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraGridVIew.swift; sourceTree = "<group>"; };
 		A540FA1B25ED523C00FB65F2 /* PhotoAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewController.swift; sourceTree = "<group>"; };
 		A540FA2125ED52CA00FB65F2 /* PhotoAlbumItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		A540FA2925ED530E00FB65F2 /* ImageZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageZoomViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				A5DD2CA525FE50460078F916 /* CameraControlView.swift */,
 				A5DD2CAA25FF02A30078F916 /* CameraToolbarView.swift */,
 				A5DD2CAF25FF02BD0078F916 /* CameraStatusView.swift */,
+				A504BC8226184F8300B948F7 /* CameraGridVIew.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				A55C806C25ECBB4900C6BD51 /* MotionManager.swift in Sources */,
 				A5DD2CA625FE50460078F916 /* CameraControlView.swift in Sources */,
 				A5DD2CAB25FF02A30078F916 /* CameraToolbarView.swift in Sources */,
+				A504BC8326184F8300B948F7 /* CameraGridVIew.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

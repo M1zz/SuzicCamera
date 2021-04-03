@@ -15,12 +15,13 @@ protocol CameraControlDelegate: class {
 class CameraControlView: UIView {
 
     weak var delegate: CameraControlDelegate!
+    
     @IBOutlet weak var captureButtonView: UIView!
     @IBOutlet weak var captureButtonOutlineView: UIView!
     @IBOutlet weak var switchButton: UIButton!
     @IBOutlet weak var photosAlbumButton: UIButton!
     @IBOutlet weak var cameraStatusView: UIView!
-    @IBOutlet weak var cameraToolbarView: UIView!
+    @IBOutlet weak var cameraToolbarView: CameraToolbarView!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
